@@ -1,0 +1,70 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js install
+
+PATH: 
+  C:\Users\Administrator\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\Administrator\bin;C:\Program Files (x86)\VMware\VMware Workstation\bin;C:\Ruby31-x64\bin;C:\Program Files\Microsoft\jdk-11.0.12.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Users\Administrator\AppData\Local\Programs\Python\Python39;C:\src\flutter\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn;C:\Program Files\dotnet;C:\Program Files\Go\bin;C:\xampp\php;C:\composer;C:\Users\Administrator\AppData\Local\Programs\Python\Python39\Scripts;C:\Users\Administrator\.local\share\solana\install\active_release\bin;C:\Users\Administrator\.cargo\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Administrator\.dotnet\tools;C:\Users\Administrator\go\bin;C:\Users\Administrator\AppData\Roaming\Composer\vendor\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  16.15.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  SyntaxError: E:\Themes\vue-black-dashboard-master\package.json: Unexpected token , in JSON at position 931
+      at JSON.parse (<anonymous>)
+      at C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:310:30)
+      at C:\Users\Administrator\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "vue-black-dashboard",
+    "version": "1.0.0",
+    "private": true,
+    "description": "A sample admin dashboard based on black dashboard UI template",
+    "author": "cristian.jora <joracristi@gmail.com>",
+    "scripts": {
+      "serve": "vue-cli-service serve --open",
+      "build": "vue-cli-service build",
+      "e2e": "node test/e2e/runner.js",
+      "lint": "vue-cli-service lint",
+      "dev": "vue-cli-service serve --open",
+      "lint-fix": "vue-cli-service lint --fix"
+    },
+    "dependencies": {
+      "chart.js": "^2.9.3",
+      "register-service-worker": "^1.7.1",
+      "vue": "^2.6.11",
+      "vue-chartjs": "^3.5.0",
+      "vue-i18n": "^8.18.2",
+      "vue-router": "^3.3.4",
+      "vue-router-prefetch": "^1.6.0",
+      "vue2-transitions": "^0.3.0"
+    },
+    "devDependencies": {
+      "@vue/cli-plugin-babel": "^4.4.6",
+      "@vue/cli-plugin-eslint": "^4.4.6",
+      "@vue/cli-plugin-pwa": "^4.4.6",
+      "@vue/cli-service": "^4.4.6",
+      "node-sass",
+      "sass-loader": "^8.0.2",
+      "vue-cli-plugin-i18n": "^1.0.1",
+      "vue-template-compiler": "^2.6.11"
+    },
+    "browserslist": [
+      "> 1%",
+      "last 2 versions",
+      "not ie <= 11"
+    ]
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

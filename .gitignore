@@ -1,0 +1,8 @@
+/client/.DS_Store
+/client/node_modules/
+/client/npm-debug.log
+/client/package-lock.json
+/client/.idea/
+/client/dist/
+/server/node_modules/
+/server/package-lock.json
