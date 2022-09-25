@@ -13,13 +13,62 @@
             <span class="navbar-toggler-bar bar3"></span>
           </button>
         </div>
-        <!-- <a class="navbar-brand" href="#"></a> -->
+        <a class="navbar-brand" href="#pablo">{{routeName}}</a>
       </div>
+      <button class="navbar-toggler" type="button"
+              @click="toggleMenu"
+              data-toggle="collapse"
+              data-target="#navigation"
+              aria-controls="navigation-index"
+              aria-label="Toggle navigation">
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+        <span class="navbar-toggler-bar navbar-kebab"></span>
+      </button>
 
       <collapse-transition>
         <div class="collapse navbar-collapse show" v-show="showMenu">
           <ul class="navbar-nav" :class="$rtl.isRTL ? 'mr-auto' : 'ml-auto'">
-
+            <base-dropdown tag="li" :menu-on-right="!$rtl.isRTL" title-tag="a" class="nav-item">
+              <a slot="title" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
+                <div class="notification d-none d-lg-block d-xl-block"></div>
+                <i class="tim-icons icon-sound-wave"></i>
+                <p class="d-lg-none">
+                  New Notifications
+                </p>
+              </a>
+              <li class="nav-link">
+                <a href="#" class="nav-item dropdown-item">Mike John responded to your email</a>
+              </li>
+              <!-- <li class="nav-link">
+                <a href="#" class="nav-item dropdown-item">Another one</a>
+              </li> -->
+            </base-dropdown>
+            <base-dropdown tag="li"
+                           :menu-on-right="!$rtl.isRTL"
+                           title-tag="a"
+                           class="nav-item"
+                           menu-classes="dropdown-navbar">
+              <a slot="title" href="#" class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="true">
+                <div class="photo">
+                  <img src="img/anime3.png">
+                </div>
+                <b class="caret d-none d-lg-block d-xl-block"></b>
+                <p class="d-lg-none">
+                  Log out
+                </p>
+              </a>
+              <li class="nav-link">
+                <a href="#" class="nav-item dropdown-item">Profile</a>
+              </li>
+              <li class="nav-link">
+                <a href="#" class="nav-item dropdown-item">Settings</a>
+              </li>
+              <div class="dropdown-divider"></div>
+              <li class="nav-link">
+                <a href="#" class="nav-item dropdown-item">Log out</a>
+              </li>
+            </base-dropdown>
           </ul>
         </div>
       </collapse-transition>

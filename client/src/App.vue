@@ -7,6 +7,9 @@
 
 <script>
   export default {
+    mounted() {
+      return api_url = "localhost:5000/";
+    },
     methods: {
       disableRTL() {
         if (!this.$rtl.isRTL) {
