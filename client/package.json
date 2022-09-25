@@ -20,7 +20,10 @@
     "vue-i18n": "^8.18.2",
     "vue-router": "^3.3.4",
     "vue-router-prefetch": "^1.6.0",
-    "vue2-transitions": "^0.3.0"
+    "vue2-transitions": "^0.3.0",
+    "axios": "^0.27.2",
+    "vue-sweetalert2": "^5.0.5",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.4.6",
