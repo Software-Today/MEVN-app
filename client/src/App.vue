@@ -8,7 +8,6 @@
 <script>
   export default {
     mounted() {
-      return api_url = "localhost:5000/";
     },
     methods: {
       disableRTL() {
@@ -23,7 +22,7 @@
     },
     mounted() {
       this.$watch('$route', this.disableRTL, { immediate: true });
-      this.$watch('$sidebar.showSidebar', this.toggleNavOpen)
+      this.$watch('$sidebar.showSidebar', this.toggleNavOpen);
     }
   };
 </script>

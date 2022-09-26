@@ -9,7 +9,6 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false });
 app.use(bodyParser.json(), urlencodedParser);
 const PORT = process.env.PORT || 5000;
 require("./routes")(app);
-console.log(process.env.JWT_SECRET);
 
 mongoose.connect(config.db_url, config.db_options).then((res) => {
     app.listen(PORT, () => console.log(`Server is running on port ${PORT}.`));

@@ -7,7 +7,6 @@ import AuthModule from './modules/auth';
 const store = createStore({
     modules: {
         auth: AuthModule, //postModule r namespace hoycce = post
-        // category: categoryModule, //categoryModule r namespace hoycce = category
         pageData: {}
     },
 

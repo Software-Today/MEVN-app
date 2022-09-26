@@ -4,6 +4,7 @@ const jwt = require("jsonwebtoken");
 
 exports.register = async (req, res) => {
     const user = req.body;
+    console.log(user);
 
     const takenUsername = await User.findOne({ username: user.username });
     const takenEmail = await User.findOne({ email: user.email });

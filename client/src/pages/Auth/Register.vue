@@ -31,6 +31,8 @@
     </div>
   </template>
   <script>
+    import axios from 'axios';
+
     export default {
         props: {},
         mounted() {
@@ -49,8 +51,42 @@
         },
         methods: {
             save() {
-                console.log(this.$store);
-                console.log(this.state);
+                if(this.model.username == "") {
+                    return;
+                }
+                var regex = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+                if(this.model.email == "" ) {
+                    return;
+                }
+                if(!regex.test(this.model.email)) {
+                    console.log("Valid email address.");
+                    return;
+                }
+                var strongPassword = new RegExp('(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])(?=.{8,})');
+                if(this.model.password == "") {
+                    return;
+                }
+                if(this.model.repassword == "" || this.model.repassword != this.model.password) {
+                    return;
+                }
+                // if(this.model.password.length < 8) {
+                //     console.log("Password must be longer than 8!");
+                // }
+                // if(!strongPassword.test(this.model.password)) {
+                //     console.log("Password must contain Uppercase, Lowercase, Number and Special symbol!");
+                //     return;
+                // }
+                var headers = {
+                  'Access-Control-Allow-Origin': '*',
+                  'Access-Control-Allow-Headers': '*',
+                  'Access-Control-Allow-Credentials': 'true'
+                };
+                var params = {username: this.model.username, email: this.model.email, password: this.model.password};
+                axios.post(`http://localhost:5000/register`, { body: params, headers: headers }).then(response => {
+                    console.log(response);
+                }).catch(e => {
+                    console.error(e);
+                })
                 // this.$store.dispatch('auth/register',this.model);
             },
             resetForm() {

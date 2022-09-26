@@ -1,8 +1,5 @@
-import Mixin from "../../helper/mixin"
-
 export default {
 
-    mixins: [Mixin],
     namespaced: true,
 
     state: {

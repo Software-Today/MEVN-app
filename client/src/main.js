@@ -32,8 +32,8 @@ Vue.use(VueSweetalert2);
 
 /* eslint-disable no-new */
 new Vue({
+  store,
   router,
   i18n,
-  store,
   render: h => h(App)
 }).$mount("#app");
